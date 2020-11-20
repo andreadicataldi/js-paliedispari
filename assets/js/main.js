@@ -27,7 +27,16 @@ function getRndInteger(min, max) {
 }
 // chiedo a utente di scegliere
 var sceltaUtente = prompt("Scegli PARI o DISPARI?").toLowerCase();
+//alert se scelta errata
+if (sceltaUtente != "pari" || sceltaUtente != "dispari") {
+  alert("DEVI scegliere o PARI o DISPARI.");
+}
 var numeroUtente = Number(prompt("Scegli un NUMERO da 1 a 5"));
+//alert se scelta errata
+if (numeroUtente > 5 || numeroUtente < 1) {
+  alert("DEVI mettere un numero da 1 a 5.");
+}
+
 alert("Hai scelto: " + numeroUtente);
 //genero numero PC
 var numeroPc = getRndInteger(1, 5);
