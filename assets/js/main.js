@@ -4,19 +4,16 @@ function isPalindrome(str) {
   //compara la stringa con la sua versione invertita (se non vuota)
   return str.length > 0 && str.split("").reverse().join("") === str;
 }
-
 // chiedo all'utente di inserire una parola
 var parola = prompt("Inserisci una parola. Verificherò se è palindroma.");
 // invoco la funzione
 var palindromo = isPalindrome(parola);
-
 // do un feedback all'utente
 if (palindromo == true) {
   alert("Complimenti, hai inserito una parola palindroma.");
 } else {
   alert("Purtroppo la parola inserita non è palindroma.");
 }
-
 //creo funzione per stabilire se un numero è pari
 function isEven(num) {
   return num % 2 == 0;
@@ -27,16 +24,7 @@ function getRndInteger(min, max) {
 }
 // chiedo a utente di scegliere
 var sceltaUtente = prompt("Scegli PARI o DISPARI?").toLowerCase();
-//alert se scelta errata
-if (sceltaUtente != "pari" || sceltaUtente != "dispari") {
-  alert("DEVI scegliere o PARI o DISPARI.");
-}
 var numeroUtente = Number(prompt("Scegli un NUMERO da 1 a 5"));
-//alert se scelta errata
-if (numeroUtente > 5 || numeroUtente < 1) {
-  alert("DEVI mettere un numero da 1 a 5.");
-}
-
 alert("Hai scelto: " + numeroUtente);
 //genero numero PC
 var numeroPc = getRndInteger(1, 5);
@@ -44,7 +32,6 @@ alert("Il PC ha scelto: " + numeroPc);
 //sommo numeri
 var somma = numeroUtente + numeroPc;
 alert("La somma è: " + somma);
-
 //condizione di vittoria
 if (isEven(somma) == true && sceltaUtente == "pari") {
   alert("Hai vinto!");
