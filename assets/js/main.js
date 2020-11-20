@@ -11,15 +11,10 @@ function isPalindrome(str) {
   }
   return palindromo;
 }
-
 // chiedo all'utente di inserire una parola
 var parola = prompt("Inserisci una parola. Verificherò se è palindroma.");
 // invoco la funzione
-
 var palindromo = isPalindrome(parola);
-console.log(strArray);
-console.log(revArray);
-console.log(palindromo);
 // do un feedback all'utente
 if (palindromo == true) {
   alert("Complimenti, hai inserito una parola palindroma.");
