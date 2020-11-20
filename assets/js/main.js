@@ -1,13 +1,25 @@
+var strArray = [];
+var revArray = [];
 function isPalindrome(str) {
-  // rimuove caratteri non alfanumerici e rende tutto minuscolo
-  str = str.replace(/[^a-z0-9]/i, "").toLowerCase();
-  //compara la stringa con la sua versione invertita (se non vuota)
-  return str.length > 0 && str.split("").reverse().join("") === str;
+  var palindromo = false;
+  strArray = str.split("");
+  for (var i = strArray.length - 1; i >= 0; i--) {
+    revArray.push(strArray[i]);
+  }
+  if (strArray.join() == revArray.join()) {
+    palindromo = true;
+  }
+  return palindromo;
 }
+
 // chiedo all'utente di inserire una parola
 var parola = prompt("Inserisci una parola. Verificherò se è palindroma.");
 // invoco la funzione
+
 var palindromo = isPalindrome(parola);
+console.log(strArray);
+console.log(revArray);
+console.log(palindromo);
 // do un feedback all'utente
 if (palindromo == true) {
   alert("Complimenti, hai inserito una parola palindroma.");
